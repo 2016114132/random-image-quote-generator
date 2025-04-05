@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= title %></title>
+        <link rel="icon" type="image/x-icon" href="/images/app-icon.png">
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <img src="/images/app-icon.png" alt="Title Icon" >
+                <h1><%= title %></h1>
+            </div>
+        </header>
+
+        <div class="container">        
+            <div class="card">    
+                <form method="POST" action="/">
+                    <img id="picture-of-day" src="<%= data.image %>" alt="Picture of the day">
+                    <p id="greeting-of-day"><%= data.quote %></p>
+
+                    <div class="input-group">
+                        <button type="submit">Generate</button>  
+                    </div>                
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
